@@ -1,0 +1,11 @@
+framework module MedimozFW {
+  umbrella header "MedimozFW.h"
+
+  export *
+  module * { export * }
+}
+
+module MedimozFW.Swift {
+    header "MedimozFW-Swift.h"
+    requires objc
+}

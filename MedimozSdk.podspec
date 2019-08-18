@@ -23,8 +23,17 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/medimoz/medimoz-sdk-ios.git", :tag => "master" }
 
+  spec.swift_version     = '4.0'
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}", "MedimozAV"
-  spec.exclude_files = "Classes/Exclude"
+  spec.ios.deployment_target = '10.0'
+
+  spec.source_files  = "MedimozFW/*.swift"
+  #spec.exclude_files = "Classes/Exclude"
   # spec.public_header_files = "Classes/**/*.h"
+
+  
+  spec.dependency 'MatomoTracker'
+
+  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+
 end
