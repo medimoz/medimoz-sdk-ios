@@ -18,7 +18,6 @@ Pod::Spec.new do |spec|
 
   spec.authors             = { "Carlos Beltrán Recabarren" => "cbrecabarren@gmail.com" }
 
-  spec.platform     = :ios
   spec.platform     = :ios, "8.0"
 
   spec.source       = { :git => "https://github.com/medimoz/medimoz-sdk-ios.git", :tag => "master" }
@@ -28,9 +27,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '10.0'
 
   spec.source_files  = "MedimozFW/*.swift"
-  #spec.exclude_files = "Classes/Exclude"
-  # spec.public_header_files = "Classes/**/*.h"
-
   
   spec.dependency 'MatomoTracker'
 
