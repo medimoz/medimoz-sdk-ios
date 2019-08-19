@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q3R-uU-4Vu">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MYT-j1-Jou">
+            <objects>
+                <navigationController id="Q3R-uU-4Vu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ux-J1-RXd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="enF-oa-can" kind="relationship" relationship="rootViewController" id="QGO-94-z5C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dJ-sE-vF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="769"/>
+        </scene>
+        <!--Medimos AV-->
+        <scene sceneID="dW8-qZ-RaI">
+            <objects>
+                <tableViewController id="enF-oa-can" customClass="SimpleTableVideoController" customModule="SimpleVideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1c4-zJ-nwe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="250" id="j8e-99-XmI" customClass="VideoTableViewCell" customModule="SimpleVideoPlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j8e-99-XmI" id="pdl-AE-Aya">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="249.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v1" translatesAutoresizingMaskIntoConstraints="NO" id="2vp-wU-bJY">
+                                            <rect key="frame" x="20" y="11" width="374" height="228"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03P-ge-m96">
+                                            <rect key="frame" x="89" y="184" width="288" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="aWr-Xp-FHB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                            <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn-play" translatesAutoresizingMaskIntoConstraints="NO" id="Uga-QC-6e1">
+                                            <rect key="frame" x="20" y="184" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="DzW-Zp-dn4"/>
+                                                <constraint firstAttribute="width" constant="40" id="RT7-Vw-2um"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2vp-wU-bJY" firstAttribute="trailing" secondItem="pdl-AE-Aya" secondAttribute="trailingMargin" id="4mN-qr-ICn"/>
+                                        <constraint firstItem="2vp-wU-bJY" firstAttribute="leading" secondItem="pdl-AE-Aya" secondAttribute="leadingMargin" id="AYB-sa-HOG"/>
+                                        <constraint firstItem="03P-ge-m96" firstAttribute="leading" secondItem="Uga-QC-6e1" secondAttribute="trailing" constant="29" id="Aln-ow-Ld9"/>
+                                        <constraint firstItem="2vp-wU-bJY" firstAttribute="bottom" secondItem="pdl-AE-Aya" secondAttribute="bottomMargin" id="JlN-Ez-zU1"/>
+                                        <constraint firstItem="2vp-wU-bJY" firstAttribute="top" secondItem="pdl-AE-Aya" secondAttribute="topMargin" id="dji-3v-UEi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Uga-QC-6e1" secondAttribute="bottom" constant="15" id="nah-6Y-vvU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="03P-ge-m96" secondAttribute="trailing" constant="17" id="pvH-rC-iPz"/>
+                                        <constraint firstItem="Uga-QC-6e1" firstAttribute="leading" secondItem="pdl-AE-Aya" secondAttribute="leadingMargin" id="qxf-RM-25W"/>
+                                        <constraint firstItem="Uga-QC-6e1" firstAttribute="leading" secondItem="pdl-AE-Aya" secondAttribute="leadingMargin" id="r9H-uX-Xbe"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="03P-ge-m96" secondAttribute="bottom" constant="15" id="xMF-Xr-jRC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Uga-QC-6e1" secondAttribute="bottom" constant="15" id="zaL-8g-rB5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="thumbnailImageView" destination="2vp-wU-bJY" id="aVG-Sz-yjo"/>
+                                    <outlet property="usernameLabel" destination="03P-ge-m96" id="3Iy-Xv-rRw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="enF-oa-can" id="0Uh-Ww-loR"/>
+                            <outlet property="delegate" destination="enF-oa-can" id="UY2-zi-xuL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Medimos AV" id="Hbs-vK-dr3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9r-Qh-uvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="773"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn-play" width="373" height="373"/>
+        <image name="v1" width="3820" height="2148"/>
+    </resources>
+</document>

@@ -1,0 +1,23 @@
+PODS:
+  - MatomoTracker (6.0.1):
+    - MatomoTracker/Core (= 6.0.1)
+  - MatomoTracker/Core (6.0.1)
+  - MedimozSdk (1.0.0):
+    - MatomoTracker
+
+DEPENDENCIES:
+  - MedimozSdk (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MatomoTracker
+  https://github.com/medimoz/medimoz-sdk-ios:
+    - MedimozSdk
+
+SPEC CHECKSUMS:
+  MatomoTracker: 3ae4f65a1f5ace8043bda7244888fee28a734de5
+  MedimozSdk: 740ae18940fb948214d87ff94306169eb2a8dd67
+
+PODFILE CHECKSUM: 952422eccfd983d816de2e0142ea79c5a321a199
+
+COCOAPODS: 1.7.5
