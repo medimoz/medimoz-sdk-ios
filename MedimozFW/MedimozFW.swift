@@ -18,7 +18,7 @@ open class MedimozAVController : AVPlayerViewController {
     var previousTime: Double = 0
     var stopped = false
     public var videoName = ""
-    public var heartBeat = 5.0
+    public var heartBeat = 60.0
     public var siteId = "1"
     public var urlPiwik : String = "https://mensis.medimoz.com/piwik.php"
     var heartBeatTimer = Timer()
