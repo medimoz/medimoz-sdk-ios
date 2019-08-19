@@ -18,7 +18,7 @@ open class MedimozAVController : AVPlayerViewController {
     var previousTime: Double = 0
     var stopped = false
     public var videoName = ""
-    public var heartBeat = 60.0
+    public var heartBeat = 5.0
     public var siteId = "1"
     public var urlPiwik : String = "https://mensis.medimoz.com/piwik.php"
     var heartBeatTimer = Timer()
@@ -63,10 +63,6 @@ open class MedimozAVController : AVPlayerViewController {
                     self.heartBeatTimer.invalidate()
                 }
                 self.previousTime = currentTime
-                if (currentTime > 0) {
-                    self.startHeartBeat();
-                }
-                
             })
         } else {
             // Fallback on earlier versions
@@ -76,6 +72,7 @@ open class MedimozAVController : AVPlayerViewController {
                                               userInfo: nil,
                                               repeats: true)
         }
+        self.startHeartBeat();
     }
     
     @objc private func goingToBackground() {
@@ -88,10 +85,6 @@ open class MedimozAVController : AVPlayerViewController {
             self.heartBeatTimer.invalidate()
         }
         self.previousTime = currentTime
-        
-        if (currentTime > 0) {
-            self.startHeartBeat();
-        }
     }
     
     @objc private func appCameToForeground() {
@@ -112,9 +105,10 @@ open class MedimozAVController : AVPlayerViewController {
             }
         }
         
-        self.matomoTracker.track(eventWithCategory: "video", action: "time-\(Int(currentTime))", name: videoName, value: nil)
-        self.matomoTracker.dispatch()
-        
+        if (Int(currentTime) % Int(self.heartBeat) == 0) {
+            self.matomoTracker.track(eventWithCategory: "video", action: "time-\(Int(currentTime))", name: videoName, value: nil)
+            self.matomoTracker.dispatch()
+        }
     }
     
     private func startHeartBeat() {
