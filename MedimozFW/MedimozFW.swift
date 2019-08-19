@@ -20,9 +20,9 @@ open class MedimozAVController : AVPlayerViewController {
     public var videoName = ""
     public var heartBeat = 60.0
     public var siteId = "1"
-    public var urlPiwik : String = "https://mensis.medimoz.com/mz"
+    public var urlPiwik : String = "https://mensis.medimoz.com/piwik.php"
     var heartBeatTimer = Timer()
-    var matomoTracker = MatomoTracker(siteId: "1", baseURL: URL(string: "https://mensis.medimoz.com/mz")!)
+    var matomoTracker = MatomoTracker(siteId: "1", baseURL: URL(string: "https://mensis.medimoz.com/piwik.php")!)
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,6 @@ open class MedimozAVController : AVPlayerViewController {
                 self.previousTime = currentTime
                 if (currentTime > 0) {
                     self.startHeartBeat();
-                    print("curr \(Int(currentTime))")
                 }
                 
             })
@@ -92,7 +91,6 @@ open class MedimozAVController : AVPlayerViewController {
         
         if (currentTime > 0) {
             self.startHeartBeat();
-            print("curr \(Int(currentTime))")
         }
     }
     
@@ -113,7 +111,7 @@ open class MedimozAVController : AVPlayerViewController {
                 }
             }
         }
-        print("interval \(Int(currentTime))")
+        
         self.matomoTracker.track(eventWithCategory: "video", action: "time-\(Int(currentTime))", name: videoName, value: nil)
         self.matomoTracker.dispatch()
         

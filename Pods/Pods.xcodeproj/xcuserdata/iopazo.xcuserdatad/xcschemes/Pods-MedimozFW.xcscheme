@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1030"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DDB3C1C8F2BBBB72125085AF1C4C71A"
+               BlueprintIdentifier = "53BF4C39AAE39E762431EC927D8582A6"
                BuildableName = "Pods_MedimozFW.framework"
                BlueprintName = "Pods-MedimozFW"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DDB3C1C8F2BBBB72125085AF1C4C71A"
+            BlueprintIdentifier = "53BF4C39AAE39E762431EC927D8582A6"
             BuildableName = "Pods_MedimozFW.framework"
             BlueprintName = "Pods-MedimozFW"
             ReferencedContainer = "container:Pods.xcodeproj">
