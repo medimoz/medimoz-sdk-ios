@@ -56,6 +56,7 @@ class SimpleTableVideoController: UITableViewController {
         
         self.present(playerViewController, animated: true, completion: {
             playerViewController.player?.play()
+            playerViewController.heartBeat = 5.0
             playerViewController.siteId = selectedVideo.siteId
             playerViewController.listeInit()
         })
