@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "8.0"
 
-  spec.source       = { :git => "https://github.com/medimoz/medimoz-sdk-ios.git", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/medimoz/medimoz-sdk-ios.git", :tag => "#{spec.version}" }
 
   spec.swift_version     = '4.0'
 
