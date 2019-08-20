@@ -8,7 +8,7 @@
 
 import UIKit
 import AVKit
-import MedimozSdk
+//import MedimozSdk
 
 class SimpleTableVideoController: UITableViewController {
     

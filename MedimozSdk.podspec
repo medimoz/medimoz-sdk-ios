@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MedimozSdk"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "Audience measurement for iOS applications"
 
   spec.description  = <<-DESC
