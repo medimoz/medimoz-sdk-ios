@@ -31,7 +31,7 @@ El formato esta basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0
 - Se agrega README
 - Se configura archivo .spect
 
-[1.0.2]: https://github.com/medimoz/medimoz-sdk-ios/v1.0.2...v1.0.1
-[1.0.1]: https://github.com/medimoz/medimoz-sdk-ios/v1.0.1...v1.0.0
-[1.0.0]: https://github.com/medimoz/medimoz-sdk-ios/v1.0.0...v0.0.1
-[0.0.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.0.1
+[1.0.2]: https://github.com/medimoz/medimoz-sdk-ios/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/medimoz/medimoz-sdk-ios/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/medimoz/medimoz-sdk-ios/v0.0.1...v1.0.0
+[0.0.1]: https://github.com/medimoz/medimoz-sdk-ios/releases/tag/v0.0.1
